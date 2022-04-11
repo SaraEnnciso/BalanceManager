@@ -12,7 +12,7 @@ namespace BalanceManager.Tests.Controllers
         public void Index()
         {
             // Arrange
-            HomeController controller = new HomeController();
+            UserController controller = new UserController();
 
             // Act
             ViewResult result = controller.Index() as ViewResult;

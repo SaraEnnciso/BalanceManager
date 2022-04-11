@@ -3,9 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager", "BalanceManager\BalanceManager.csproj", "{48222A73-491F-4234-84CA-33C758220F5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager.API", "BalanceManager\BalanceManager.API.csproj", "{48222A73-491F-4234-84CA-33C758220F5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager.Tests", "BalanceManager.Tests\BalanceManager.Tests.csproj", "{332E016A-7863-44B2-BF46-F8DFEF2E909F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager.Data", "BalanceManager.DataAcess\BalanceManager.Data.csproj", "{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BalanceManager.DBFile", "BalanceManager.DBFile", "{42716CA8-9CF9-41A2-A294-075B145E5AB2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\BalanceDB.db = ..\..\..\Desktop\BalanceDB.db
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager.Business", "BalanceManager.Business\BalanceManager.Business.csproj", "{A2C583C5-2E11-4C5C-BDF7-C90100DE1CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalanceManager.Domain", "BalanceManager.Domain\BalanceManager.Domain.csproj", "{35377497-77C3-4C5A-8B1B-C85FFC6394E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +32,18 @@ Global
 		{332E016A-7863-44B2-BF46-F8DFEF2E909F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{332E016A-7863-44B2-BF46-F8DFEF2E909F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{332E016A-7863-44B2-BF46-F8DFEF2E909F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C583C5-2E11-4C5C-BDF7-C90100DE1CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C583C5-2E11-4C5C-BDF7-C90100DE1CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C583C5-2E11-4C5C-BDF7-C90100DE1CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C583C5-2E11-4C5C-BDF7-C90100DE1CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35377497-77C3-4C5A-8B1B-C85FFC6394E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35377497-77C3-4C5A-8B1B-C85FFC6394E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35377497-77C3-4C5A-8B1B-C85FFC6394E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35377497-77C3-4C5A-8B1B-C85FFC6394E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
