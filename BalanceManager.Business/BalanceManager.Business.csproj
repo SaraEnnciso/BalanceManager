@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BalanceManager.Business</RootNamespace>
     <AssemblyName>BalanceManager.Business</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\BalanceManager.DataAcess\BalanceManager.Data.csproj">
+      <Project>{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}</Project>
+      <Name>BalanceManager.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BalanceManager.Domain\BalanceManager.Domain.csproj">
       <Project>{35377497-77C3-4C5A-8B1B-C85FFC6394E4}</Project>
       <Name>BalanceManager.Domain</Name>
