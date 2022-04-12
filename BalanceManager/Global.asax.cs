@@ -9,6 +9,7 @@ namespace BalanceManager
         {
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            UnityConfig.RegisterComponents();
         }
     }
 }
