@@ -1,5 +1,4 @@
-﻿using BalanceManager.Controllers;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BalanceManager.Tests.Controllers
 {
@@ -10,7 +9,7 @@ namespace BalanceManager.Tests.Controllers
         public void Index()
         {
             // Arrange
-            UserController controller = new UserController();
+            //UserController controller = new UserController();
 
             // Act
             //ViewResult result = controller.Index() as ViewResult;

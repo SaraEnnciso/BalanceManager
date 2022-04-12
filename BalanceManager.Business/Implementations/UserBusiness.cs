@@ -21,7 +21,7 @@ namespace BalanceManager.Business.Implementations
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            return _repository.Get(id);
         }
 
         public bool Update(User user)

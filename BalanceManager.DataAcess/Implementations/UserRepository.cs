@@ -1,10 +1,17 @@
 ﻿using BalanceManager.DataAcess.Contracts;
 using BalanceManager.Domain.Model;
+using System.Linq;
 
 namespace BalanceManager.DataAcess.Implementations
 {
-    class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
     {
+        private readonly BalanceDbContext _context;
+
+        public UserRepository(BalanceDbContext context)
+        {
+            _context = context;
+        }
         public bool Delete(User user)
         {
             throw new System.NotImplementedException();
@@ -12,7 +19,8 @@ namespace BalanceManager.DataAcess.Implementations
 
         public User Get(int id)
         {
-            throw new System.NotImplementedException();
+            var roles = (from a in _context.Roles select a).Single();
+            return (from a in _context.Users select a).Single();
         }
 
         public bool Update(User user)

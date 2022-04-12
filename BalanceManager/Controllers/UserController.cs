@@ -1,23 +1,33 @@
-﻿using System.Web.Http;
+﻿using BalanceManager.Business.Contracts;
+using BalanceManager.Domain.Model;
+using System.Web.Http;
 
 namespace BalanceManager.Controllers
 {
-    [RoutePrefix("User")]
     public class UserController : ApiController
     {
-        //private readonly IUserBusiness _business;
-        //public UserController(IUserBusiness business)
-        //{
-        //    _business = business;
-        //}
+        private readonly IUserBusiness _business;
+        public UserController(IUserBusiness business)
+        {
+            _business = business;
+        }
 
-        [Route("")]
         [HttpGet]
         public IHttpActionResult Get()
         {
-            string result = "bien";
+            User user = _business.Get(1);
 
-            return Ok(result);
+            //UserDTO userDTO = new UserDTO
+            //{
+            //    Login = user.Login,
+            //    //role,
+            //    USD_balance = user.USD_balance
+            //};
+
+
+            //string user = "hi";
+
+            return Ok(user);
         }
     }
 }
