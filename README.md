@@ -6,10 +6,12 @@ BalanceManager is a .NET Web API developed as a solution for the .NET Test Task.
 
 1. Clone the repo
 ```bash
-git clone https://github.com/your_username_/Project-Name.git 
+git clone https://github.com/SaraEnnciso/BalanceManager.git
 ```
 
 ## Usage
+
+To use the endpoints, navigate to http://localhost:58972/swagger
 
 ## Notes
 
