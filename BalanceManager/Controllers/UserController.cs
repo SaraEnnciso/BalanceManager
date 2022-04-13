@@ -57,7 +57,7 @@ namespace BalanceManager.Controllers
 
             if (!updated) return BadRequest("Unable to update User");
 
-            var payload = new { user.Login };
+            var payload = user.Login;
 
             return Ok("User " + payload + " updated succesfully");
 
