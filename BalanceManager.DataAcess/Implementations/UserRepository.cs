@@ -47,7 +47,20 @@ namespace BalanceManager.DataAcess.Implementations
 
         public bool Update(User user)
         {
-            throw new System.NotImplementedException();
+            using (var db = new BalanceDbContext())
+            {
+                User userRecord = db.Users.SingleOrDefault(a => a.Login == user.Login);
+
+                if (userRecord == null) return false;
+
+                db.Users.Attach(user);
+                db.Entry(user).Property(q => q.USD_balance).IsModified = true;
+
+                db.SaveChanges();
+
+                return true;
+            }
+
         }
     }
 }

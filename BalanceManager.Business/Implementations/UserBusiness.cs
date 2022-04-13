@@ -21,14 +21,30 @@ namespace BalanceManager.Business.Implementations
 
         public User Get(User user)
         {
-            if (user.Login == null || user.Password == null) return null;
+            if (!ValidCredentials(user)) return null;
 
             return _repository.Get(user);
         }
 
         public bool Update(User user)
         {
-            throw new NotImplementedException();
+            if (!ValidCredentials(user)) return false;
+
+            User userValidatedCredentials = _repository.Get(user);
+
+            if (userValidatedCredentials == null) return false;
+
+            return _repository.Update(user);
+
+        }
+
+        private bool ValidCredentials(User user)
+        {
+            if (user.Login == null || user.Password == null) return false;
+
+            if (string.IsNullOrEmpty(user.Login) || string.IsNullOrEmpty(user.Password)) return false;
+
+            return true;
         }
     }
 }

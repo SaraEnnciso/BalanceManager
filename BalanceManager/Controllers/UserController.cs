@@ -36,5 +36,27 @@ namespace BalanceManager.Controllers
 
             return Ok(loggedUserDTO);
         }
+
+        [HttpPut]
+        public IHttpActionResult Update([FromBody] UserDTO userDTO)
+        {
+            if (userDTO == null) return BadRequest("Request is null");
+
+            User user = new User
+            {
+                Login = userDTO.Login,
+                Password = userDTO.Password,
+                USD_balance = userDTO.USD_balance
+            };
+
+            bool updated = _business.Update(user);
+
+            if (!updated) return BadRequest("Unable to update User");
+
+            var payload = new { user.Login };
+
+            return Ok("User " + payload + " updated succesfully");
+
+        }
     }
 }
