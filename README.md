@@ -16,14 +16,44 @@ To use the provided endpoints in a local environment, follow the next steps:
 1. Run the project
 2. Navigate to http://localhost:58972/swagger
 3. Click on User
-4. Select the method to 
+4. Select the method to run
 
 ## REST API
 
 The REST API is described bellow.
 
 ### Login
+`POST`
+
+#### Request URL
+http://localhost:58972/api/User
+
+#### Request Body
+{
+  "Login": "string",
+  "Password": "string",
+}
+
+#### Response Body
+{
+  "Login": "string",
+  "USD_balance": 0,
+  "Role": "string"
+  }
+}
+
 ### Update
+`PUT`
+
+#### Request URL
+http://localhost:58972/api/User
+
+#### Request Body
+{
+  "Login": "string",
+  "Password": "string",
+  "USD_balance": 0,
+}
 
 ## Notes
 
@@ -34,3 +64,4 @@ To do list:
 - Relocate database file to relative path in solution and change it in connectionString.
 - Implement sessions to avoid entering user credentials on each HTTP request.
 - Encrypt password field.
+- Provide better instructions at README.md
