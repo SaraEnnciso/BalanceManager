@@ -90,10 +90,6 @@
       <Project>{3F59C9BE-966C-4866-A21F-11DA3DC2F8E0}</Project>
       <Name>BalanceManager.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BalanceManager.Domain\BalanceManager.Domain.csproj">
-      <Project>{35377497-77C3-4C5A-8B1B-C85FFC6394E4}</Project>
-      <Name>BalanceManager.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

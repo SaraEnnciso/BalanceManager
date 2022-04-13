@@ -1,6 +1,6 @@
 ﻿using BalanceManager.Business.Contracts;
+using BalanceManager.DataAcess;
 using BalanceManager.DataAcess.Contracts;
-using BalanceManager.Domain.Model;
 using System;
 
 namespace BalanceManager.Business.Implementations

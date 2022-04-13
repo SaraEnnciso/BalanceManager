@@ -1,4 +1,4 @@
-﻿using BalanceManager.Domain.Model;
+﻿using BalanceManager.DataAcess;
 
 namespace BalanceManager.Business.Contracts
 {

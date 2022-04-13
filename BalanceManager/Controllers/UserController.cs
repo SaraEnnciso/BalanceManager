@@ -1,5 +1,5 @@
 ﻿using BalanceManager.Business.Contracts;
-using BalanceManager.Domain.Model;
+using BalanceManager.DataAcess;
 using BalanceManager.DTO;
 using System.Web.Http;
 
@@ -31,6 +31,10 @@ namespace BalanceManager.Controllers
             UserDTO loggedUserDTO = new UserDTO
             {
                 Login = loggedUser.Login,
+                RoleDTO = new RoleDTO
+                {
+                    Description = loggedUser.Role.Description
+                },
                 USD_balance = loggedUser.USD_balance
             };
 

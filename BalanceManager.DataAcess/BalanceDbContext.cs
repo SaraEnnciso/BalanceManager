@@ -1,11 +1,10 @@
-﻿using BalanceManager.Domain.Model;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 
 namespace BalanceManager.DataAcess
 {
     public class BalanceDbContext : DbContext
     {
-        public BalanceDbContext() : base("name=BalanceDbContext")
+        public BalanceDbContext() : base("name=balanceManagerEntities")
         {
             Database.SetInitializer<BalanceDbContext>(null);
         }
