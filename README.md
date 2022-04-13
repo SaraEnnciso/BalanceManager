@@ -57,11 +57,11 @@ http://localhost:58972/api/User
 
 ## Notes
 
-I couldn't connect to SQLite database, so I created a Mock Repository that doesn't persist changes. A Repository file intented to work with SQLite db is available in the solution.
+I couldn't connect to the SQLite database, so I created a Mock Repository that doesn't persist changes. A Repository file intended to work with SQLite DB is available in the solution.
 
 To do list:
 - Connect to SQLite database file.
-- Relocate database file to relative path in solution and change it in connectionString.
+- Relocate database file to a relative path in solution and change it in connectionString.
 - Implement sessions to avoid entering user credentials on each HTTP request.
-- Encrypt password field.
+- Encrypt the password field.
 - Provide better instructions at README.md
