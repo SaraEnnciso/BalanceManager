@@ -11,7 +11,9 @@ git clone https://github.com/SaraEnnciso/BalanceManager.git
 
 ## Usage
 
-To use the endpoints, navigate to http://localhost:58972/swagger
+To use the provided endpoints, follow the next steps: 
+
+1. Navigate to http://localhost:58972/swagger
 
 ## Notes
 
