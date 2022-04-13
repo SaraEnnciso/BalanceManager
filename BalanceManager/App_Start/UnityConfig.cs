@@ -5,7 +5,6 @@ using BalanceManager.DataAcess.Contracts;
 using BalanceManager.DataAcess.Implementations;
 using System.Web.Http;
 using Unity;
-using Unity.WebApi;
 
 namespace BalanceManager
 {
@@ -16,7 +15,7 @@ namespace BalanceManager
             var container = new UnityContainer();
 
             container.RegisterType<IUserBusiness, UserBusiness>();
-            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IUserRepository, UserMockRepository>();
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityResolver(container);
         }
