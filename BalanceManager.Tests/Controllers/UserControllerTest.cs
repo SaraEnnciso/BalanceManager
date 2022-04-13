@@ -6,7 +6,7 @@ namespace BalanceManager.Tests.Controllers
     public class UserControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void Login()
         {
             // Arrange
             //UserController controller = new UserController();

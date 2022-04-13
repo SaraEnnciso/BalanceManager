@@ -19,9 +19,11 @@ namespace BalanceManager.Business.Implementations
             throw new NotImplementedException();
         }
 
-        public User Get(int id)
+        public User Get(User user)
         {
-            return _repository.Get(id);
+            if (user.Login == null || user.Password == null) return null;
+
+            return _repository.Get(user);
         }
 
         public bool Update(User user)

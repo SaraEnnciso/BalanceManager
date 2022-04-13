@@ -4,7 +4,7 @@ namespace BalanceManager.Business.Contracts
 {
     public interface IUserBusiness
     {
-        User Get(int id);
+        User Get(User user);
 
         bool Update(User user);
 

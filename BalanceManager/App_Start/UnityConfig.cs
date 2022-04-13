@@ -1,3 +1,4 @@
+using BalanceManager.App_Start;
 using BalanceManager.Business.Contracts;
 using BalanceManager.Business.Implementations;
 using BalanceManager.DataAcess.Contracts;
@@ -14,13 +15,10 @@ namespace BalanceManager
         {
             var container = new UnityContainer();
 
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-
             container.RegisterType<IUserBusiness, UserBusiness>();
             container.RegisterType<IUserRepository, UserRepository>();
 
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityResolver(container);
         }
     }
 }

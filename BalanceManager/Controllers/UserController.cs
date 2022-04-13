@@ -1,5 +1,6 @@
 ﻿using BalanceManager.Business.Contracts;
 using BalanceManager.Domain.Model;
+using BalanceManager.DTO;
 using System.Web.Http;
 
 namespace BalanceManager.Controllers
@@ -12,22 +13,28 @@ namespace BalanceManager.Controllers
             _business = business;
         }
 
-        [HttpGet]
-        public IHttpActionResult Get()
+        [HttpPost]
+        public IHttpActionResult Login([FromBody] UserDTO userDTO)
         {
-            User user = _business.Get(1);
+            if (userDTO == null) return BadRequest("Request is null");
 
-            //UserDTO userDTO = new UserDTO
-            //{
-            //    Login = user.Login,
-            //    //role,
-            //    USD_balance = user.USD_balance
-            //};
+            User userToLogIn = new User
+            {
+                Login = userDTO.Login,
+                Password = userDTO.Password
+            };
 
+            User loggedUser = _business.Get(userToLogIn);
 
-            //string user = "hi";
+            if (loggedUser == null) return NotFound();
 
-            return Ok(user);
+            UserDTO loggedUserDTO = new UserDTO
+            {
+                Login = loggedUser.Login,
+                USD_balance = loggedUser.USD_balance
+            };
+
+            return Ok(loggedUserDTO);
         }
     }
 }

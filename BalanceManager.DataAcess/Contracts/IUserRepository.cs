@@ -4,7 +4,7 @@ namespace BalanceManager.DataAcess.Contracts
 {
     public interface IUserRepository
     {
-        User Get(int id);
+        User Get(User user);
 
         bool Update(User user);
 
