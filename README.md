@@ -4,20 +4,30 @@ BalanceManager is a .NET Web API developed as a solution for the .NET Test Task.
 
 ## Installation
 
-1. Clone the repo
+Clone the repo
 ```bash
 git clone https://github.com/SaraEnnciso/BalanceManager.git
 ```
 
 ## Usage
 
-To use the provided endpoints, follow the next steps: 
+To use the provided endpoints in a local environment, follow the next steps: 
 
-1. Navigate to http://localhost:58972/swagger
+1. Run the project
+2. Navigate to http://localhost:58972/swagger
+3. Click on User
+4. Select the method to 
+
+## REST API
+
+The REST API is described bellow.
+
+### Login
+### Update
 
 ## Notes
 
-I couldn't connect to SQLite database, so I created a Mock Repository that doesn't persist changes. A repository file intented to work with SQLite db is available in the solution.
+I couldn't connect to SQLite database, so I created a Mock Repository that doesn't persist changes. A Repository file intented to work with SQLite db is available in the solution.
 
 To do list:
 - Connect to SQLite database file.
