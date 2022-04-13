@@ -1,6 +1,4 @@
-﻿using BalanceManager.Domain.Model;
-
-namespace BalanceManager.DataAcess.Contracts
+﻿namespace BalanceManager.DataAcess.Contracts
 {
     public interface IUserRepository
     {
