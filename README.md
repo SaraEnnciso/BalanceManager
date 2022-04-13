@@ -59,6 +59,8 @@ http://localhost:58972/api/User
 
 I couldn't connect to the SQLite database, so I created a Mock Repository that doesn't persist changes. A Repository file intended to work with SQLite DB is available in the solution.
 
+I had problems integrating DI and SQLite libraries. Maybe if I had used the .NET Core framework I wouldn't have had this issue.
+
 To do list:
 - Connect to SQLite database file.
 - Relocate database file to a relative path in solution and change it in connectionString.
